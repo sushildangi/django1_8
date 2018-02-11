@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 # Create your views here.
-from newsletter.forms import SignUpForm
+from newsletter.forms import SignUpForm, ContactForm
 
 
 def home(request):
@@ -23,3 +23,13 @@ def home(request):
         }
 
     return render(request, "home.html", context)
+
+
+def contact(request):
+    form = ContactForm(request.POST or None)
+    if form.is_valid():
+        print(form.cleaned_data)
+    context={
+        'form':form,
+    }
+    return render(request,'forms.html',context)
