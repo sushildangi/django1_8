@@ -1,15 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Teting Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{%block head_title%}Welcome{%endblock%}
+
+{%block jumbotron%}
+
+{{ block.super }}
+Hello
+
+{% endblock %}
+
+{% block content %}
+
 <h1>{{title}}</h1>
+
+{{user}}
+
+{{request.user}}
+
 <form method="POST" action=".">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Sign Up">
 </form>
-</body>
-</html>
+
+{% endblock %}
