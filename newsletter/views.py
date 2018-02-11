@@ -40,7 +40,7 @@ def contact(request):
                   contact_message,
                   from_email,
                   to_email,
-                  fail_silently=True)
+                  fail_silently=False)
 
     context={
         'form':form,
