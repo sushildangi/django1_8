@@ -11,7 +11,7 @@ def home(request):
 
     context = {
         'form': form,
-        'title': 'Welcome to Sign Up Page'
+        'title': 'Welcome'
     }
 
     if form.is_valid():
