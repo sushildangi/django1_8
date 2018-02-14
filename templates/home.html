@@ -2,7 +2,11 @@
 {% load crispy_forms_tags %}
 
 {%block head_title%}Welcome{%endblock%}
+<style>
+{% block style %}
 
+{% endblock %}
+</style>
 {%block jumbotron_content%}
 <div class="row">
     <div class="col-xs-6">
@@ -28,7 +32,7 @@
 
     <div class="col-sm-3 pull-right">
 
-        <p class="lead">{{title}}</p>
+        <p class="lead text-align-center">{{title}}</p>
 
         <form method="POST" action=".">
             {% csrf_token %}
@@ -37,13 +41,13 @@
         </form>
     </div>
     <div class="col-sm-3">
-        <p class="lead">Built with django &amp; Bootstrap</p>
+        <p class="lead text-align-center">Built with django &amp; Bootstrap</p>
     </div>
     <div class="col-sm-3">
-        <p class="lead">Built with django &amp; Bootstrap</p>
+        <p class="lead text-align-center">Built with django &amp; Bootstrap</p>
     </div>
     <div class="col-sm-3">
-        <p class="lead">Built with django &amp; Bootstrap</p>
+        <p class="lead text-align-center">Built with django &amp; Bootstrap</p>
     </div>
 </div>
 {% endblock %}
