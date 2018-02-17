@@ -1,29 +1,40 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
-
+{% load staticfiles %}
 {%block head_title%}Welcome{%endblock%}
 <style>
 {% block style %}
-
+    .navbar-static-top{
+        margin-bottom:0px !important;
+    }
+    .jumbotron{
+        background-color:#155a1e;
+        color:#fff;
+    }
 {% endblock %}
+
+
 
 </style>
 {%block jumbotron%}
 <div class="jumbotron">
-    <div class="row">
-        <div class="col-xs-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
 
-            <h1>Try Django 1.8</h1>
-            <p>The MVP Landing project is designed to get your project started. The goal is to
-                help you launch as soon as possible with the latest amount using time or money.
-            </p>
-            <p>
-                <a class="btn btn-lg btn-primary" href="#" role="button">Join Us
-                    &raquo;</a>
-            </p>
-        </div>
-        <div class="col-xs-6" style="background-color:black;height:300px;">
-
+                <h1>Try Django 1.8</h1>
+                <p>The MVP Landing project is designed to get your project started. The goal is to
+                    help you launch as soon as possible with the latest amount using time or money.
+                </p>
+                <p>
+                    <a class="btn btn-lg btn-primary" href="#" role="button">Join Us
+                        &raquo;</a>
+                </p>
+            </div>
+            <div class="col-xs-6" >
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qkFWkOw-ByU" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 </div>
@@ -45,6 +56,7 @@
     </div>
     <div class="col-sm-3">
         <p class="lead text-align-center">Built with django &amp; Bootstrap</p>
+        <img src="{% static 'dist/pics/pic1.jpeg' %}" class="img-responsive" height="600" width="400"/>
     </div>
     <div class="col-sm-3">
         <p class="lead text-align-center">Built with django &amp; Bootstrap</p>
